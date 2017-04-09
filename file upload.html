@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Data Base</title>
+<style type="text/css">
+body {
+	margin-top: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#navigation
+{
+	list-style-type: none;
+	background-image: url(Back%20ground.png);
+	width: 100%;
+	top: 0px;
+}
+#navigation li {
+	width: 80px;
+	height: 55px;
+	text-align: center;
+	float: left;
+	padding-top: 0px;
+	font-size: 15px;
+	font-family: "微软雅黑", "宋体", "隶书";
+	background-image: url(images/noactive.jpg);
+	padding-left: 40px;
+}
+.ziti {
+	font-size: 15px;
+	line-height: 18px;
+}
+a {width:46px; height:72px;}
+.ziti {
+	font-size: 15px;
+	line-height: 18px;
+}
+a:link {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+a:visited { text-decoration:none; color:#FFFFFF; }
+#navigation li:hover {
+	color: #D6D6D6;
+	text-decoration: underline;
+}
+a:hover{
+	font-size: 20px;
+	text-align: justify;
+	color: #FFFFFF;
+	font-family: "微软雅黑", "宋体", "隶书";
+	top: 0px;
+	clip: rect(0px,auto,auto,auto);
+	margin: 0px;
+	font-weight: bold;
+}
+.a {
+	font-family: Verdana, Geneva, sans-serif;
+}
+.dl {
+}
+.like {
+}
+.left {
+	padding-left: 100px;
+}
+.brove {
+	color: #800000;
+}
+a.channel:link{color:#03C;}
+a.channel:visited{color:#800000;}
+a.channel:hover{color:#800000;}
+a.channel:active{color:#800000;}
+</style>
+    <script type="text/javascript">
+      function fileSelected() {
+        var file = document.getElementById('fileToUpload').files[0];
+        if (file) {
+          var fileSize = 0;
+          if (file.size > 1024 * 1024)
+            fileSize = (Math.round(file.size * 100 / (1024 * 1024)) / 100).toString() + 'MB';
+          else
+            fileSize = (Math.round(file.size * 100 / 1024) / 100).toString() + 'KB';
+
+          document.getElementById('fileName').innerHTML = 'Name: ' + file.name;
+          document.getElementById('fileSize').innerHTML = 'Size: ' + fileSize;
+          document.getElementById('fileType').innerHTML = 'Type: ' + file.type;
+        }
+      }
+
+      function uploadFile() {
+        var fd = new FormData();
+        fd.append("fileToUpload", document.getElementById('fileToUpload').files[0]);
+        var xhr = new XMLHttpRequest();
+        xhr.upload.addEventListener("progress", uploadProgress, false);
+        xhr.addEventListener("load", uploadComplete, false);
+        xhr.addEventListener("error", uploadFailed, false);
+        xhr.addEventListener("abort", uploadCanceled, false);
+        xhr.open("POST", "UploadMinimal.aspx");
+        xhr.send(fd);
+      }
+
+      function uploadProgress(evt) {
+        if (evt.lengthComputable) {
+          var percentComplete = Math.round(evt.loaded * 100 / evt.total);
+          document.getElementById('progressNumber').innerHTML = percentComplete.toString() + '%';
+        }
+        else {
+          document.getElementById('progressNumber').innerHTML = 'unable to compute';
+        }
+      }
+
+      function uploadComplete(evt) {
+        /* This event is raised when the server send back a response */
+        alert(evt.target.responseText);
+      }
+
+      function uploadFailed(evt) {
+        alert("There was an error attempting to upload the file.");
+      }
+
+      function uploadCanceled(evt) {
+        alert("The upload has been canceled by the user or the browser dropped the connection.");
+      }
+    </script>
+</head>
+
+<body>
+<ul id="navigation">
+<li><a href="#"><a href="https://lans1995.github.io/lanswork.github.io/"><em><B>Home</B></em></a></li>
+<li><a href="#"><a href="https://lans1995.github.io/lanswork.github.io/Teaching Groups.html"><em><B>Teaching Groups</B></em></a></li>
+<li><a href="#"><a href="https://lans1995.github.io/lanswork.github.io/Syllabus.html"><em><B>Syllabus</B></em></a></li>
+<li><a href="#"><a href="https://lans1995.github.io/lanswork.github.io/Calendar.html"><em><B>Calendar</B></em></a></li>
+<li><a href="#"><a href="https://lans1995.github.io/lanswork.github.io/Lecture Notes.html"><em><B>Lecture Notes</B></em></a></li>
+<li><a href="#"><a href="https://lans1995.github.io/lanswork.github.io/Assignments.html"><em><B>Assignments</B></em></a></li>
+<li><a href="#"><a href="https://lans1995.github.io/lanswork.github.io/Course Project.html"><em><B>Course Project</B></em></a></li>
+<li><a href="#"><a href="https://lans1995.github.io/lanswork.github.io/Resources.html"><em><B>Resources</B></em></a></li>
+<li><a href="#"><a href="https://lans1995.github.io/lanswork.github.io/Reading List.html"><em><B>Reading List</B></em></a></li>
+<li><a href="#"><a href="https://lans1995.github.io/lanswork.github.io/Q&A.html"><em><B> Q & A Forum</B></em></a></li>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p></ul>
+<table width="85%" height="2165" border="0">
+  <tr>
+   <td width="83%" height="58"  ><div align="center"><font size=6 class="left"><B class="left brove">Homework-upload Instuction</B></font></div></td>
+<td width="17%" rowspan="3" valign="top"><img src="logo.png" width="148" height="136"  align="right" /></td>
+  </tr>
+  <tr>
+    <td height="2101" valign="top" class="left"><p class="C">1.Download github desktop at <a href="https://github-for-windows.en.softonic.com/" class="channel"><strong><em>https://github-for-windows.en.softonic.com/</em></strong></a>
+      <p class="C"><br />
+        2.Login  github desktop by using this account:<br />
+        chose setting-options<br />
+        username：lans1995 <br />
+        password：lans1995729<br />
+        <img src="file upload_clip_image002_0000.png" alt="do" width="553" height="333" />      
+      <p class="C"><br />
+        3.Click + number,then clicking  &quot;clone&quot; to clone lans1995/lanswork.github.io project and chosing  where to save.Then clone it.<br />
+        <img width="553" height="333" src="file upload_clip_image004_0000.png" alt="again" />       
+      <p class="C"><br />
+        4.Open the project you have downloaded and  find the file named DB Homework and put your homework in it.<br />
+  <img width="554" height="384" src="file upload_clip_image006_0000.png" alt="successe" />       
+      <p class="C"><br />
+        5.Open your github desktop.There is a white  dot next to changes that the project file has been changed and that your work  has been put in.Fill the summary with your name,same as description,at last  click &quot;commit to master&quot;button.<br />
+        <img src="file upload_clip_image008_0000.png" alt="it" width="553" height="333" />          
+      <p class="C"><br />
+      6.Click &quot;Sync&quot; to upload updates  to the server to complete the job submission    <img src="win.png" alt="" width="553" height="333" /></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html>

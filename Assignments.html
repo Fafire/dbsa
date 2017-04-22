@@ -68,9 +68,13 @@ a:hover{
 	color: #800000;
 }
 a.channel:link{color:#03C;}
-a.channel:visited{color:#800000;}
-a.channel:hover{color:#800000;}
-a.channel:active{color:#800000;}
+a.channel:visited{color:#03C;}
+a.channel:hover{color:#03C;}
+a.channel:active{color:#03C;}
+.cs{ width:50px; height:60px; background-color: #F0F0F0; border:1px solid #D9D9D9; z-index:1; right:5px; bottom:5px;POSITION:fixed;_position:absolute; _margin-top:expression(document.documentElement.clientHeight-this.style.pixelHeight+document.documentElement.scrollTop);}
+.cs a{ width:50px; height:20px; display:block; text-align:center; line-height:49px; font-size:12px; color:#999999; text-decoration:none;}
+.cw{ border-bottom:1px solid #D9D9D9;}
+.xx{ width:600px; height:0px;}
 </style>
 </head>
 
@@ -92,7 +96,7 @@ a.channel:active{color:#800000;}
 <table width="85%" border="0">
   <tr>
    <td width="83%" height="58"><div align="center" class="a">
-     <div align="left"><font size=6 class="brove left"><B>Assighments</B></font></div>
+     <div align="left"><font size=6 class="brove left"><B>Assignments</B></font></div>
    </div>     &nbsp;</td>
 <td width="17%" rowspan="3" valign="top"><img src="logo.png" width="148" height="136"  align="right" /></td>
   </tr>
@@ -100,8 +104,6 @@ a.channel:active{color:#800000;}
         <tbody>
           <tr>
             <td width="888"><div class="left">
-              <p><br />
-                Assignments</p>
               <p><strong>Working together or copying the ideas of others</strong></p>
               <p>You are expected to produce your own solutions to this assignment. Copying other peoples&rsquo; work is considered plagiarism and is not acceptable. However, I understand that it is useful to talk over assignments like this with others in the initial stages in order to get an idea of the scope of the problem, or understand basic techniques. Ask me if you are not sure about the rules.</p>
               <p><em><strong>Warning:</strong></em> the CIS department reports all cases of plagiarism and cheating to the Director of Student Services. Minimum penalty for a first offence is a zero for the assignment or exam, and the offense will be on your student record for two years. Subsequent offences bring higher penalties.</p>
@@ -174,5 +176,9 @@ a.channel:active{color:#800000;}
   </tr>
 </table>
 <p>&nbsp;</p>
+<div class="cs">
+<a onclick="goTop();return false;" href="#">TOP</a>
+</div>
+<div class="xx"></div>
 </body>
 </html>

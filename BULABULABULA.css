@@ -1,0 +1,31 @@
+@charset "utf-8";
+button.css3button {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #1f061f;
+	padding: 3px 10px;
+	background: -moz-linear-gradient(
+		top,
+		#fafbff 0%,
+		#f2f7ff 52%,
+		#e8ebf0);
+	background: -webkit-gradient(
+		linear, left top, left bottom,
+		from(#fafbff),
+		color-stop(0.52, #f2f7ff),
+		to(#e8ebf0));
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #d6d6d6;
+	-moz-box-shadow: 0px 1px 0px rgba(0,0,0,0.2),
+		inset 0px 1px 0px rgba(184,175,184,0.7);
+	-webkit-box-shadow: 0px 1px 0px rgba(0,0,0,0.2),
+		inset 0px 1px 0px rgba(184,175,184,0.7);
+	box-shadow: 0px 1px 0px rgba(0,0,0,0.2),
+		inset 0px 1px 0px rgba(184,175,184,0.7);
+	text-shadow: 0px -1px 0px rgba(148,136,148,0.3),
+		0px 0px 0px rgba(122,118,122,0);
+	font-weight: bold;
+}
+/* CSS Document */
